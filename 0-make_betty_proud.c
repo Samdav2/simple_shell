@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  * main - C program designed just to make betty proud
- * 
+ *
  * Return: Void
  */
 int main(void)
