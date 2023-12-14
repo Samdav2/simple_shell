@@ -1,10 +1,10 @@
 #include "main.h"
 /**
- * main - C program designed just to make betty proud
+ * demo - C program designed just to make betty proud
  *
  * Return: Void
  */
-int main(void)
+int demo(void)
 {
 	int a, b, c;
 

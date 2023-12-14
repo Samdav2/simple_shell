@@ -9,14 +9,13 @@ int main(void)
 	size_t char_read;
 	size_t in_size = 0;
 	pid_t mypid;
-	char *args[] = {input, NULL};
 
 	while (1)
 	{
 		printf("$$ ");
 		char_read = getline(&input, &in_size, stdin);
 
-		if (char_read == -1)
+		if (char_read == (size_t)-1)
 		{
 			if (feof(stdin))
 			{
@@ -41,6 +40,7 @@ int main(void)
 		}
 		else if (mypid == 0)
 		{
+			char *args [] = { "input", NULL};
 			if (execve(input, args, NULL) == -1)
 			{
 				perror("execve failed!");
